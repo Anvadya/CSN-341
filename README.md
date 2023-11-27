@@ -8,19 +8,6 @@ Cerberus comprises three main parts:
 - An Efficient Network Packet Classifier Leveraging Decision Trees
 - Network packet classification utilizing deep learning methodologies
 
-## Team Members:
-
-- Anvadya Khare (21114015)
-- Tejas Sajwan (21114106)
-- Amandeep Singh (21411005)
-- Mehak Sharma (21114060)
-- Manashree Kalode (21114057)
-- Nishita Singh (21114068)
-- Gujar Neha Pankaj (21114039)
-- Akhil Punia (21114008)
-- Bhoomi Bonal (21114028)
-- Prerna (21114075)
-
 ## Environment Used
 
 A custom dataplane for forwarding and processing networking packets was used, it must be installed to use the custom dataplane (though the code will run using the standard Linux implementation of TCP also) from the IX repository (which required `dpdk` and `Dune`) (we have used IX Operating System with userspace dataplane developed at Stanford and EPFL).
@@ -33,11 +20,11 @@ The System receives pcap (packet capture) files as input from the network under 
 
 ## How to use?
 
-1. Fork repository from https://github.com/Anvadya/CSN-341/tree/main
+1. Fork repository from https://github.com/Anvadya/CSN-341/
 2. Run the bash script file run.sh , the script contains the main function, which calls other functions to perform 
-    1. packet pre-processing
-    2. decision-tree based screening(firewall)
-    3. DL-model based classification(Flow Transformer)
+    1. Packet pre-processing
+    2. Decision-tree based screening
+    3. DL-model based classification
 
 ## References
 
@@ -45,3 +32,16 @@ The System receives pcap (packet capture) files as input from the network under 
 - [Low-Rate DDoS Attack Detection Using Expectation of Packet Size](https://www.hindawi.com/journals/scn/2017/3691629/)
 - [Computer Network: An Implementation of MAC Spoofing](https://www.researchgate.net/publication/371440124_Computer_Network_An_Implementation_of_MAC_Spoofing)
 - [FlowTransformer](https://arxiv.org/pdf/2304.14746.pdf)
+
+## Team Members:
+
+- Anvadya Khare (21114015)
+- Tejas Sajwan (21114106)
+- Amandeep Singh (21411005)
+- Mehak Sharma (21114060)
+- Manashree Kalode (21114057)
+- Nishita Singh (21114068)
+- Gujar Neha Pankaj (21114039)
+- Akhil Punia (21114008)
+- Bhoomi Bonal (21114028)
+- Prerna (21114075)
