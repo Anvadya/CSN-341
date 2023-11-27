@@ -19,4 +19,11 @@ A custom dataplane for forwarding and processing networking packets was used, it
 
 The dataplane requires the use of specific Intel NIC (refer to IX System Requirements). 
 
+## Description
+The System receives pcap (packet capture)  files as input from the network under observation. These are screened by a set of preliminary policies defined by a Decision Tree Classifier, to classify the packets into Malicious and Non-Malicious. The packets are further passed onto the DL Model to be classified with certainty.
+
 ## How to use?
+
+1. Fork repository from https://github.com/Anvadya/CSN-341/tree/main
+2. Run the bash script file run.sh , The script contains the main function, which calls other functions to perform packet pre-processing, decision-tree based screening(firewall), and DL-model based classification(Flow Transformer).
+3. The resultant accuracy of the DL-model is obtained.
