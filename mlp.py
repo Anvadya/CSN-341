@@ -16,7 +16,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 
 if not os.path.exists('model.pkl'):
-    rawdata = pd.read_csv("Neha.csv")
+    rawdata = pd.read_csv("training.csv")
 
     def converttonumber(ipstr):
         return int(ipaddress.ip_address(ipstr))
