@@ -1,0 +1,2 @@
+Timestamp,Source IP,Destination IP,Source Port,Destination Port,Protocol,TTL,ICMP Type,Flags,DNS Query ID,Data,Data Length,Min TLL,Max TTL,UPTO_128,UPTO_256,UPTO_1024,Shortest_Flow_Pkt,Longest_Flow_Pkt
+1413578829.242339,10.0.0.11,157.166.226.25,51384,80,TCP,128,,"Urg:False, Ack:False, Psh:False, Rst:False, Syn:True, Fin:False",,,0,128,128,1,0,0,0,0

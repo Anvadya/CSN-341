@@ -1,0 +1,367 @@
+PS D:\OneDrive - iitr.ac.in\Acads\Sem5\CSN341\Project\FlowTransformer> python.exe .\main.py
+Using cache file path: cache\UNSW_NB15_0_QdLmZHuh8yOmlGcKBEkf7hepImY0_VzQ981ONg0PHPxtLtik6rZN0dGw0.feather
+Reading directly from cache cache\UNSW_NB15_0_QdLmZHuh8yOmlGcKBEkf7hepImY0_VzQ981ONg0PHPxtLtik6rZN0dGw0.feather...
+D:\OneDrive - iitr.ac.in\Acads\Sem5\CSN341\Project\FlowTransformer\implementations\transformers\basic\encoder_block.py:74: UserWarning: Typically inner_dimension should be greater than or equal to the input_dimension!
+  warnings.warn(f"Typically inner_dimension should be greater than or equal to the input_dimension!")
+2023-11-06 01:15:49.856915: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to
+==================================================================================================
+ input_SRC_TO_DST_AVG_THROU  [(None, 8, 1)]               0         []
+ GHPUT (InputLayer)
+
+ input_RETRANSMITTED_OUT_BY  [(None, 8, 1)]               0         []
+ TES (InputLayer)
+
+ input_RETRANSMITTED_IN_PKT  [(None, 8, 1)]               0         []
+ S (InputLayer)
+
+ input_DST_TO_SRC_AVG_THROU  [(None, 8, 1)]               0         []
+ GHPUT (InputLayer)
+
+ input_OUT_PKTS (InputLayer  [(None, 8, 1)]               0         []
+ )
+
+ input_SRC_TO_DST_SECOND_BY  [(None, 8, 1)]               0         []
+ TES (InputLayer)
+
+ input_MAX_IP_PKT_LEN (Inpu  [(None, 8, 1)]               0         []
+ tLayer)
+
+ input_MIN_TTL (InputLayer)  [(None, 8, 1)]               0         []
+
+ input_NUM_PKTS_512_TO_1024  [(None, 8, 1)]               0         []
+ _BYTES (InputLayer)
+
+ input_DST_TO_SRC_SECOND_BY  [(None, 8, 1)]               0         []
+ TES (InputLayer)
+
+ input_TCP_WIN_MAX_IN (Inpu  [(None, 8, 1)]               0         []
+ tLayer)
+
+ input_RETRANSMITTED_IN_BYT  [(None, 8, 1)]               0         []
+ ES (InputLayer)
+
+ input_NUM_PKTS_1024_TO_151  [(None, 8, 1)]               0         []
+ 4_BYTES (InputLayer)
+
+ input_OUT_BYTES (InputLaye  [(None, 8, 1)]               0         []
+ r)
+
+ input_MAX_TTL (InputLayer)  [(None, 8, 1)]               0         []
+
+ input_NUM_PKTS_128_TO_256_  [(None, 8, 1)]               0         []
+ BYTES (InputLayer)
+
+ input_TCP_WIN_MAX_OUT (Inp  [(None, 8, 1)]               0         []
+ utLayer)
+
+ input_SHORTEST_FLOW_PKT (I  [(None, 8, 1)]               0         []
+ nputLayer)
+
+ input_FLOW_DURATION_MILLIS  [(None, 8, 1)]               0         []
+ ECONDS (InputLayer)
+
+ input_DURATION_IN (InputLa  [(None, 8, 1)]               0         []
+ yer)
+
+ input_IN_BYTES (InputLayer  [(None, 8, 1)]               0         []
+ )
+
+ input_MIN_IP_PKT_LEN (Inpu  [(None, 8, 1)]               0         []
+ tLayer)
+
+ input_RETRANSMITTED_OUT_PK  [(None, 8, 1)]               0         []
+ TS (InputLayer)
+
+ input_NUM_PKTS_256_TO_512_  [(None, 8, 1)]               0         []
+ BYTES (InputLayer)
+
+ input_NUM_PKTS_UP_TO_128_B  [(None, 8, 1)]               0         []
+ YTES (InputLayer)
+
+ input_LONGEST_FLOW_PKT (In  [(None, 8, 1)]               0         []
+ putLayer)
+
+ input_IN_PKTS (InputLayer)  [(None, 8, 1)]               0         []
+
+ input_DURATION_OUT (InputL  [(None, 8, 1)]               0         []
+ ayer)
+
+ input_CLIENT_TCP_FLAGS (In  [(None, 8, 16)]              0         []
+ putLayer)
+
+ input_L4_SRC_PORT (InputLa  [(None, 8, 32)]              0         []
+ yer)
+
+ input_TCP_FLAGS (InputLaye  [(None, 8, 17)]              0         []
+ r)
+
+ input_ICMP_IPV4_TYPE (Inpu  [(None, 8, 32)]              0         []
+ tLayer)
+
+ input_ICMP_TYPE (InputLaye  [(None, 8, 32)]              0         []
+ r)
+
+ input_PROTOCOL (InputLayer  [(None, 8, 32)]              0         []
+ )
+
+ input_SERVER_TCP_FLAGS (In  [(None, 8, 15)]              0         []
+ putLayer)
+
+ input_L4_DST_PORT (InputLa  [(None, 8, 32)]              0         []
+ yer)
+
+ input_L7_PROTO (InputLayer  [(None, 8, 32)]              0         []
+ )
+
+ concatenate (Concatenate)   (None, 8, 268)               0         ['input_SRC_TO_DST_AVG_THROUGH
+                                                                    PUT[0][0]',
+                                                                     'input_RETRANSMITTED_OUT_BYTE
+                                                                    S[0][0]',
+                                                                     'input_RETRANSMITTED_IN_PKTS[
+                                                                    0][0]',
+                                                                     'input_DST_TO_SRC_AVG_THROUGH
+                                                                    PUT[0][0]',
+                                                                     'input_OUT_PKTS[0][0]',
+                                                                     'input_SRC_TO_DST_SECOND_BYTE
+                                                                    S[0][0]',
+                                                                     'input_MAX_IP_PKT_LEN[0][0]',
+                                                                     'input_MIN_TTL[0][0]',
+                                                                     'input_NUM_PKTS_512_TO_1024_B
+                                                                    YTES[0][0]',
+                                                                     'input_DST_TO_SRC_SECOND_BYTE
+                                                                    S[0][0]',
+                                                                     'input_TCP_WIN_MAX_IN[0][0]',
+                                                                     'input_RETRANSMITTED_IN_BYTES
+                                                                    [0][0]',
+                                                                     'input_NUM_PKTS_1024_TO_1514_
+                                                                    BYTES[0][0]',
+                                                                     'input_OUT_BYTES[0][0]',
+                                                                     'input_MAX_TTL[0][0]',
+                                                                     'input_NUM_PKTS_128_TO_256_BY
+                                                                    TES[0][0]',
+                                                                     'input_TCP_WIN_MAX_OUT[0][0]'
+                                                                    , 'input_SHORTEST_FLOW_PKT[0][
+                                                                    0]',
+                                                                     'input_FLOW_DURATION_MILLISEC
+                                                                    ONDS[0][0]',
+                                                                     'input_DURATION_IN[0][0]',
+                                                                     'input_IN_BYTES[0][0]',
+                                                                     'input_MIN_IP_PKT_LEN[0][0]',
+                                                                     'input_RETRANSMITTED_OUT_PKTS
+                                                                    [0][0]',
+                                                                     'input_NUM_PKTS_256_TO_512_BY
+                                                                    TES[0][0]',
+                                                                     'input_NUM_PKTS_UP_TO_128_BYT
+                                                                    ES[0][0]',
+                                                                     'input_LONGEST_FLOW_PKT[0][0]
+                                                                    ',
+                                                                     'input_IN_PKTS[0][0]',
+                                                                     'input_DURATION_OUT[0][0]',
+                                                                     'input_CLIENT_TCP_FLAGS[0][0]
+                                                                    ',
+                                                                     'input_L4_SRC_PORT[0][0]',
+                                                                     'input_TCP_FLAGS[0][0]',
+                                                                     'input_ICMP_IPV4_TYPE[0][0]',
+                                                                     'input_ICMP_TYPE[0][0]',
+                                                                     'input_PROTOCOL[0][0]',
+                                                                     'input_SERVER_TCP_FLAGS[0][0]
+                                                                    ',
+                                                                     'input_L4_DST_PORT[0][0]',
+                                                                     'input_L7_PROTO[0][0]']
+
+ block_0_transformer_encode  (None, 8, 268)               345544    ['concatenate[0][0]']
+ r (TransformerEncoderBlock
+ )
+
+ block_1_transformer_encode  (None, 8, 268)               345544    ['block_0_transformer_encoder[
+ r (TransformerEncoderBlock                                         0][0]']
+ )
+
+ slice_last (Lambda)         (None, 268)                  0         ['block_1_transformer_encoder[
+                                                                    0][0]']
+
+ classification_mlp_0_128 (  (None, 128)                  34432     ['slice_last[0][0]']
+ Dense)
+
+ dropout (Dropout)           (None, 128)                  0         ['classification_mlp_0_128[0][
+                                                                    0]']
+
+ binary_classification_out   (None, 1)                    129       ['dropout[0][0]']
+ (Dense)
+
+==================================================================================================
+Total params: 725649 (2.77 MB)
+Trainable params: 725649 (2.77 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
+Building eval dataset...
+Splitting dataset to featurewise...
+False
+Evaluation dataset is built!
+Positive samples in eval set: 2816
+Negative samples in eval set: 56940
+2023-11-06 01:22:34.148352: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x291711e8180 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2023-11-06 01:22:34.149150: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2023-11-06 01:22:34.456967: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2023-11-06 01:22:34.809802: W tensorflow/compiler/tf2xla/kernels/random_ops.cc:59] Warning: Using tf.random.uniform with XLA compilation will ignore seeds; consider using tf.random.stateless_uniform instead if reproducible behavior is desired. model/block_0_transformer_encoder/block_0_attention_dropout/dropout/random_uniform/RandomUniform
+2023-11-06 01:22:46.011618: I .\tensorflow/compiler/jit/device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+2023-11-06 01:22:46.024004: E .\tensorflow/compiler/xla/stream_executor/stream_executor_internal.h:124] SetPriority unimplemented for this stream.
+Epoch = 0 / 5 (early stop in 5), step = 0, loss = 1.16947, results = [1.1694691181182861, 0.5078125] -- elapsed (train): 0.00s
+Epoch = 0 / 5 (early stop in 5), step = 2, loss = 0.62836, results = [0.6283572316169739, 0.59375] -- elapsed (train): 0.47s
+Epoch = 0 / 5 (early stop in 5), step = 4, loss = 0.65747, results = [0.6574699282646179, 0.546875] -- elapsed (train): 0.78s
+Epoch = 0 / 5 (early stop in 5), step = 20, loss = 0.08217, results = [0.08216513693332672, 0.96875] -- elapsed (train): 3.23s
+Epoch = 0 / 5 (early stop in 5), step = 22, loss = 0.06743, results = [0.06742843985557556, 0.984375] -- elapsed (train): 3.54s
+Epoch = 0 / 5 (early stop in 5), step = 24, loss = 0.05398, results = [0.053983114659786224, 0.984375] -- elapsed (train): 3.87s
+Epoch = 0 / 5 (early stop in 5), step = 26, loss = 0.15386, results = [0.15386387705802917, 0.953125] -- elapsed (train): 4.17s
+Epoch = 0 / 5 (early stop in 5), step = 28, loss = 0.06658, results = [0.0665820837020874, 0.96875] -- elapsed (train): 4.52sEpoch = 0 / 5 (early stop in 5), step = 30, loss = 0.07664, results = [0.07663993537425995, 0.9765625] -- elapsed (train): 4.80s
+Epoch = 0 / 5 (early stop in 5), step = 32, loss = 0.04872, results = [0.048717714846134186, 0.984375] -- elapsed (train): 5.10s
+Epoch = 0 / 5 (early stop in 5), step = 34, loss = 0.01187, results = [0.011867726221680641, 1.0] -- elapsed (train): 5.40s
+Epoch = 0 / 5 (early stop in 5), step = 36, loss = 0.07077, results = [0.07076504826545715, 0.96875] -- elapsed (train): 5.71s
+Epoch = 0 / 5 (early stop in 5), step = 38, loss = 0.18211, results = [0.1821136176586151, 0.9609375] -- elapsed (train): 6.01s
+Epoch = 0 / 5 (early stop in 5), step = 40, loss = 0.05842, results = [0.05841720849275589, 0.9921875] -- elapsed (train): 6.30s
+Epoch = 0 / 5 (early stop in 5), step = 42, loss = 0.03090, results = [0.030895397067070007, 0.984375] -- elapsed (train): 6.60s
+Epoch = 0 / 5 (early stop in 5), step = 44, loss = 0.01269, results = [0.01268694270402193, 1.0] -- elapsed (train): 6.91s
+Epoch = 0 / 5 (early stop in 5), step = 46, loss = 0.01449, results = [0.014494737610220909, 1.0] -- elapsed (train): 7.22s
+Epoch = 0 / 5 (early stop in 5), step = 48, loss = 0.01174, results = [0.01174391433596611, 1.0] -- elapsed (train): 7.53s
+Epoch = 0 / 5 (early stop in 5), step = 50, loss = 0.05144, results = [0.05144358426332474, 0.9765625] -- elapsed (train): 7.84s
+Epoch = 0 / 5 (early stop in 5), step = 52, loss = 0.11264, results = [0.11263951659202576, 0.9765625] -- elapsed (train): 8.15s
+Epoch = 0 / 5 (early stop in 5), step = 54, loss = 0.00837, results = [0.008365224115550518, 1.0] -- elapsed (train): 8.46s
+Epoch = 0 / 5 (early stop in 5), step = 56, loss = 0.09496, results = [0.09496119618415833, 0.9765625] -- elapsed (train): 8.76s
+Epoch = 0 / 5 (early stop in 5), step = 58, loss = 0.03182, results = [0.03181556612253189, 0.9921875] -- elapsed (train): 9.04s
+Epoch = 0 / 5 (early stop in 5), step = 60, loss = 0.10664, results = [0.10664428025484085, 0.984375] -- elapsed (train): 9.34s
+Epoch = 0 / 5 (early stop in 5), step = 62, loss = 0.02990, results = [0.029897747561335564, 0.9921875] -- elapsed (train): 9.64s
+Epoch = 1 / 5 (early stop in 5), step = 0, loss = 0.02938, results = [0.029381128028035164, 0.9921875] -- elapsed (train): 9.93s
+Epoch = 1 / 5 (early stop in 5), step = 2, loss = 0.00902, results = [0.009020395576953888, 1.0] -- elapsed (train): 10.25s
+Epoch = 1 / 5 (early stop in 5), step = 4, loss = 0.04176, results = [0.041756339371204376, 0.9921875] -- elapsed (train): 10.56s
+Epoch = 1 / 5 (early stop in 5), step = 6, loss = 0.01124, results = [0.011244863271713257, 1.0] -- elapsed (train): 10.89s
+Epoch = 1 / 5 (early stop in 5), step = 8, loss = 0.01226, results = [0.01226184330880642, 0.9921875] -- elapsed (train): 11.19s
+Epoch = 1 / 5 (early stop in 5), step = 10, loss = 0.01163, results = [0.011634736321866512, 1.0] -- elapsed (train): 11.49s
+Epoch = 1 / 5 (early stop in 5), step = 12, loss = 0.00329, results = [0.0032871116418391466, 1.0] -- elapsed (train): 11.76s
+Epoch = 1 / 5 (early stop in 5), step = 14, loss = 0.00224, results = [0.0022361110895872116, 1.0] -- elapsed (train): 12.07s
+Epoch = 1 / 5 (early stop in 5), step = 16, loss = 0.08030, results = [0.08030355721712112, 0.984375] -- elapsed (train): 12.36s
+Epoch = 1 / 5 (early stop in 5), step = 18, loss = 0.11845, results = [0.11844845116138458, 0.9765625] -- elapsed (train): 12.66s
+Epoch = 1 / 5 (early stop in 5), step = 20, loss = 0.04430, results = [0.04429894685745239, 0.9921875] -- elapsed (train): 12.99s
+Epoch = 1 / 5 (early stop in 5), step = 22, loss = 0.00890, results = [0.00889658648520708, 1.0] -- elapsed (train): 13.27s
+Epoch = 1 / 5 (early stop in 5), step = 24, loss = 0.01892, results = [0.01892460137605667, 1.0] -- elapsed (train): 13.59s
+Epoch = 1 / 5 (early stop in 5), step = 26, loss = 0.08503, results = [0.0850287526845932, 0.984375] -- elapsed (train): 13.90s
+Epoch = 1 / 5 (early stop in 5), step = 28, loss = 0.01567, results = [0.01567373424768448, 1.0] -- elapsed (train): 14.19s
+Epoch = 1 / 5 (early stop in 5), step = 30, loss = 0.01112, results = [0.0111222043633461, 0.9921875] -- elapsed (train): 14.49s
+Epoch = 1 / 5 (early stop in 5), step = 32, loss = 0.08484, results = [0.084841288626194, 0.984375] -- elapsed (train): 14.79s
+Epoch = 1 / 5 (early stop in 5), step = 34, loss = 0.03464, results = [0.03464413806796074, 0.9921875] -- elapsed (train): 15.08s
+Epoch = 1 / 5 (early stop in 5), step = 36, loss = 0.05950, results = [0.05949530750513077, 0.9921875] -- elapsed (train): 15.39s
+Epoch = 1 / 5 (early stop in 5), step = 38, loss = 0.06621, results = [0.06621087342500687, 0.984375] -- elapsed (train): 15.68s
+Epoch = 1 / 5 (early stop in 5), step = 40, loss = 0.00661, results = [0.006605621427297592, 1.0] -- elapsed (train): 15.95s
+Epoch = 1 / 5 (early stop in 5), step = 42, loss = 0.08517, results = [0.0851675420999527, 0.9765625] -- elapsed (train): 16.24s
+Epoch = 1 / 5 (early stop in 5), step = 44, loss = 0.05535, results = [0.055352602154016495, 0.9765625] -- elapsed (train): 16.53s
+Epoch = 1 / 5 (early stop in 5), step = 46, loss = 0.00775, results = [0.007746858522295952, 1.0] -- elapsed (train): 16.80s
+Epoch = 1 / 5 (early stop in 5), step = 48, loss = 0.00985, results = [0.009854869917035103, 1.0] -- elapsed (train): 17.13s
+Epoch = 1 / 5 (early stop in 5), step = 50, loss = 0.00596, results = [0.005957105662673712, 1.0] -- elapsed (train): 17.43s
+Epoch = 1 / 5 (early stop in 5), step = 52, loss = 0.02617, results = [0.02616867981851101, 0.9921875] -- elapsed (train): 17.70s
+Epoch = 1 / 5 (early stop in 5), step = 54, loss = 0.03499, results = [0.03498535975813866, 0.9921875] -- elapsed (train): 17.98s
+Epoch = 1 / 5 (early stop in 5), step = 56, loss = 0.09958, results = [0.09957980364561081, 0.9765625] -- elapsed (train): 18.29s
+Epoch = 1 / 5 (early stop in 5), step = 58, loss = 0.05139, results = [0.05138640105724335, 0.9921875] -- elapsed (train): 18.63s
+Epoch = 1 / 5 (early stop in 5), step = 60, loss = 0.02954, results = [0.029541900381445885, 0.9921875] -- elapsed (train): 18.91s
+Epoch = 1 / 5 (early stop in 5), step = 62, loss = 0.22868, results = [0.22867630422115326, 0.9453125] -- elapsed (train): 19.21s
+Epoch = 2 / 5 (early stop in 5), step = 0, loss = 0.07617, results = [0.076169952750206, 0.9765625] -- elapsed (train): 19.52s
+Epoch = 2 / 5 (early stop in 5), step = 2, loss = 0.00628, results = [0.0062787337228655815, 1.0] -- elapsed (train): 19.84s
+Epoch = 2 / 5 (early stop in 5), step = 4, loss = 0.02707, results = [0.02707407996058464, 0.9921875] -- elapsed (train): 20.16s
+Epoch = 2 / 5 (early stop in 5), step = 6, loss = 0.02889, results = [0.028887543827295303, 0.9921875] -- elapsed (train): 20.50s
+Epoch = 2 / 5 (early stop in 5), step = 8, loss = 0.03741, results = [0.03741171211004257, 0.984375] -- elapsed (train): 20.80s
+Epoch = 2 / 5 (early stop in 5), step = 10, loss = 0.06565, results = [0.0656532570719719, 0.9765625] -- elapsed (train): 21.09s
+Epoch = 2 / 5 (early stop in 5), step = 12, loss = 0.02687, results = [0.026874177157878876, 0.9921875] -- elapsed (train): 21.41s
+Epoch = 2 / 5 (early stop in 5), step = 14, loss = 0.05006, results = [0.05005886033177376, 0.9921875] -- elapsed (train): 21.73s
+Epoch = 2 / 5 (early stop in 5), step = 16, loss = 0.06217, results = [0.062167830765247345, 0.9921875] -- elapsed (train): 22.04s
+Epoch = 2 / 5 (early stop in 5), step = 18, loss = 0.01274, results = [0.012738360092043877, 0.9921875] -- elapsed (train): 22.34s
+Epoch = 2 / 5 (early stop in 5), step = 20, loss = 0.05375, results = [0.05374865606427193, 0.9921875] -- elapsed (train): 22.65s
+Epoch = 2 / 5 (early stop in 5), step = 22, loss = 0.00383, results = [0.0038334294222295284, 1.0] -- elapsed (train): 22.94s
+Epoch = 2 / 5 (early stop in 5), step = 24, loss = 0.00412, results = [0.004122292622923851, 1.0] -- elapsed (train): 23.24s
+Epoch = 2 / 5 (early stop in 5), step = 26, loss = 0.00266, results = [0.0026629120111465454, 1.0] -- elapsed (train): 23.54s
+Epoch = 2 / 5 (early stop in 5), step = 28, loss = 0.00654, results = [0.006540980655699968, 1.0] -- elapsed (train): 23.81s
+Epoch = 2 / 5 (early stop in 5), step = 30, loss = 0.01087, results = [0.010872375220060349, 1.0] -- elapsed (train): 24.08s
+Epoch = 2 / 5 (early stop in 5), step = 32, loss = 0.02142, results = [0.021419037133455276, 0.9921875] -- elapsed (train): 24.38s
+Epoch = 2 / 5 (early stop in 5), step = 34, loss = 0.00394, results = [0.003942833747714758, 1.0] -- elapsed (train): 24.67s
+Epoch = 2 / 5 (early stop in 5), step = 36, loss = 0.04439, results = [0.04439143091440201, 0.9921875] -- elapsed (train): 24.97s
+Epoch = 2 / 5 (early stop in 5), step = 38, loss = 0.00292, results = [0.0029184771701693535, 1.0] -- elapsed (train): 25.25s
+Epoch = 2 / 5 (early stop in 5), step = 40, loss = 0.02175, results = [0.021752625703811646, 0.9921875] -- elapsed (train): 25.54s
+Epoch = 2 / 5 (early stop in 5), step = 42, loss = 0.05852, results = [0.05851671099662781, 0.984375] -- elapsed (train): 25.83s
+Epoch = 2 / 5 (early stop in 5), step = 44, loss = 0.01436, results = [0.014363023452460766, 1.0] -- elapsed (train): 26.12s
+Epoch = 2 / 5 (early stop in 5), step = 46, loss = 0.00383, results = [0.003829109948128462, 1.0] -- elapsed (train): 26.42s
+Epoch = 2 / 5 (early stop in 5), step = 48, loss = 0.00899, results = [0.008994406089186668, 0.9921875] -- elapsed (train): 26.72s
+Epoch = 2 / 5 (early stop in 5), step = 50, loss = 0.06450, results = [0.06449876725673676, 0.984375] -- elapsed (train): 27.03s
+Epoch = 2 / 5 (early stop in 5), step = 52, loss = 0.01274, results = [0.012735448777675629, 0.9921875] -- elapsed (train): 27.30s
+Epoch = 2 / 5 (early stop in 5), step = 54, loss = 0.05102, results = [0.05101815611124039, 0.9921875] -- elapsed (train): 27.62s
+Epoch = 2 / 5 (early stop in 5), step = 56, loss = 0.07711, results = [0.07711385935544968, 0.984375] -- elapsed (train): 27.94s
+Epoch = 2 / 5 (early stop in 5), step = 58, loss = 0.00326, results = [0.003255337942391634, 1.0] -- elapsed (train): 28.25s
+Epoch = 2 / 5 (early stop in 5), step = 60, loss = 0.10116, results = [0.10116493701934814, 0.9765625] -- elapsed (train): 28.56s
+Epoch = 2 / 5 (early stop in 5), step = 62, loss = 0.00878, results = [0.00877929013222456, 1.0] -- elapsed (train): 28.85s
+Epoch = 3 / 5 (early stop in 4), step = 0, loss = 0.06267, results = [0.06267020851373672, 0.984375] -- elapsed (train): 29.13s
+Epoch = 3 / 5 (early stop in 4), step = 2, loss = 0.00620, results = [0.006202954798936844, 1.0] -- elapsed (train): 29.43s
+Epoch = 3 / 5 (early stop in 4), step = 4, loss = 0.03842, results = [0.03842063620686531, 0.9921875] -- elapsed (train): 29.73s
+Epoch = 3 / 5 (early stop in 4), step = 6, loss = 0.00697, results = [0.006966601591557264, 1.0] -- elapsed (train): 30.01s
+Epoch = 3 / 5 (early stop in 4), step = 8, loss = 0.00709, results = [0.00708942674100399, 1.0] -- elapsed (train): 30.31s
+Epoch = 3 / 5 (early stop in 4), step = 10, loss = 0.01223, results = [0.012231562286615372, 1.0] -- elapsed (train): 30.59s
+Epoch = 3 / 5 (early stop in 4), step = 12, loss = 0.00474, results = [0.004744363483041525, 1.0] -- elapsed (train): 30.86s
+Epoch = 3 / 5 (early stop in 4), step = 14, loss = 0.00488, results = [0.0048814741894602776, 1.0] -- elapsed (train): 31.16s
+Epoch = 3 / 5 (early stop in 4), step = 16, loss = 0.04201, results = [0.04200895130634308, 0.9921875] -- elapsed (train): 31.48s
+Epoch = 3 / 5 (early stop in 4), step = 18, loss = 0.03996, results = [0.0399625301361084, 0.9921875] -- elapsed (train): 31.76s
+Epoch = 3 / 5 (early stop in 4), step = 20, loss = 0.00674, results = [0.0067434064112603664, 1.0] -- elapsed (train): 32.03s
+Epoch = 3 / 5 (early stop in 4), step = 22, loss = 0.00642, results = [0.006423519924283028, 1.0] -- elapsed (train): 32.32s
+Epoch = 3 / 5 (early stop in 4), step = 24, loss = 0.00394, results = [0.003940356429666281, 1.0] -- elapsed (train): 32.67s
+Epoch = 3 / 5 (early stop in 4), step = 26, loss = 0.00409, results = [0.004090877249836922, 1.0] -- elapsed (train): 32.97s
+Epoch = 3 / 5 (early stop in 4), step = 28, loss = 0.03048, results = [0.030482836067676544, 0.9921875] -- elapsed (train): 33.28s
+Epoch = 3 / 5 (early stop in 4), step = 30, loss = 0.00277, results = [0.002769272308796644, 1.0] -- elapsed (train): 33.59s
+Epoch = 3 / 5 (early stop in 4), step = 32, loss = 0.00228, results = [0.0022819573059678078, 1.0] -- elapsed (train): 33.87s
+Epoch = 3 / 5 (early stop in 4), step = 34, loss = 0.00152, results = [0.0015167808160185814, 1.0] -- elapsed (train): 34.16s
+Epoch = 3 / 5 (early stop in 4), step = 36, loss = 0.04587, results = [0.045873988419771194, 0.9921875] -- elapsed (train): 34.46s
+Epoch = 3 / 5 (early stop in 4), step = 38, loss = 0.00219, results = [0.002194369211792946, 1.0] -- elapsed (train): 34.76s
+Epoch = 3 / 5 (early stop in 4), step = 40, loss = 0.00193, results = [0.0019318230915814638, 1.0] -- elapsed (train): 35.06s
+Epoch = 3 / 5 (early stop in 4), step = 42, loss = 0.03567, results = [0.03567212447524071, 0.9921875] -- elapsed (train): 35.41s
+Epoch = 3 / 5 (early stop in 4), step = 44, loss = 0.01445, results = [0.01444798894226551, 0.9921875] -- elapsed (train): 35.72s
+Epoch = 3 / 5 (early stop in 4), step = 46, loss = 0.03118, results = [0.03118162788450718, 0.9921875] -- elapsed (train): 36.00s
+Epoch = 3 / 5 (early stop in 4), step = 48, loss = 0.06908, results = [0.06908294558525085, 0.9921875] -- elapsed (train): 36.30s
+Epoch = 3 / 5 (early stop in 4), step = 50, loss = 0.04320, results = [0.043203048408031464, 0.9921875] -- elapsed (train): 36.60s
+Epoch = 3 / 5 (early stop in 4), step = 52, loss = 0.05035, results = [0.0503513440489769, 0.9921875] -- elapsed (train): 36.91s
+Epoch = 3 / 5 (early stop in 4), step = 54, loss = 0.02374, results = [0.023737015202641487, 0.9921875] -- elapsed (train): 37.21s
+Epoch = 3 / 5 (early stop in 4), step = 56, loss = 0.07650, results = [0.07650082558393478, 0.984375] -- elapsed (train): 37.52s
+Epoch = 3 / 5 (early stop in 4), step = 58, loss = 0.03096, results = [0.030957667157053947, 0.9921875] -- elapsed (train): 37.83s
+s
+Epoch = 4 / 5 (early stop in 5), step = 2, loss = 0.04975, results = [0.04975351691246033, 0.9921875] -- elapsed (train): 39.03s
+Epoch = 4 / 5 (early stop in 5), step = 4, loss = 0.00576, results = [0.005759131163358688, 1.0] -- elapsed (train): 39.32s
+Epoch = 4 / 5 (early stop in 5), step = 6, loss = 0.00355, results = [0.0035499681252986193, 1.0] -- elapsed (train): 39.62s
+Epoch = 4 / 5 (early stop in 5), step = 8, loss = 0.02649, results = [0.026489324867725372, 0.9921875] -- elapsed (train): 39.91s
+Epoch = 4 / 5 (early stop in 5), step = 10, loss = 0.00353, results = [0.0035256738774478436, 1.0] -- elapsed (train): 40.23s
+Epoch = 4 / 5 (early stop in 5), step = 12, loss = 0.01056, results = [0.010558872483670712, 1.0] -- elapsed (train): 40.52s
+Epoch = 4 / 5 (early stop in 5), step = 14, loss = 0.00498, results = [0.0049845073372125626, 1.0] -- elapsed (train): 40.81s
+Epoch = 4 / 5 (early stop in 5), step = 16, loss = 0.00384, results = [0.0038432886358350515, 1.0] -- elapsed (train): 41.11s
+Epoch = 4 / 5 (early stop in 5), step = 18, loss = 0.00310, results = [0.003098088316619396, 1.0] -- elapsed (train): 41.42s
+Epoch = 4 / 5 (early stop in 5), step = 20, loss = 0.06155, results = [0.06154788285493851, 0.984375] -- elapsed (train): 41.73s
+Epoch = 4 / 5 (early stop in 5), step = 22, loss = 0.03407, results = [0.03406934440135956, 0.9921875] -- elapsed (train): 42.03s
+Epoch = 4 / 5 (early stop in 5), step = 24, loss = 0.00273, results = [0.002728254534304142, 1.0] -- elapsed (train): 42.34s
+Epoch = 4 / 5 (early stop in 5), step = 26, loss = 0.00315, results = [0.00315101258456707, 1.0] -- elapsed (train): 42.64s
+Epoch = 4 / 5 (early stop in 5), step = 28, loss = 0.01262, results = [0.012620015069842339, 0.9921875] -- elapsed (train): 42.92s
+Epoch = 4 / 5 (early stop in 5), step = 30, loss = 0.04770, results = [0.047697294503450394, 0.9921875] -- elapsed (train): 43.22s
+Epoch = 4 / 5 (early stop in 5), step = 32, loss = 0.00420, results = [0.0042016468942165375, 1.0] -- elapsed (train): 43.52s
+Epoch = 4 / 5 (early stop in 5), step = 34, loss = 0.00525, results = [0.0052478499710559845, 1.0] -- elapsed (train): 43.81s
+Epoch = 4 / 5 (early stop in 5), step = 36, loss = 0.00334, results = [0.00333814462646842, 1.0] -- elapsed (train): 44.11s
+Epoch = 4 / 5 (early stop in 5), step = 38, loss = 0.02318, results = [0.023175949230790138, 0.9921875] -- elapsed (train): 44.40s
+Epoch = 4 / 5 (early stop in 5), step = 40, loss = 0.03211, results = [0.032114721834659576, 0.9921875] -- elapsed (train): 44.69s
+Epoch = 4 / 5 (early stop in 5), step = 42, loss = 0.00398, results = [0.00398198002949357, 1.0] -- elapsed (train): 44.99s
+Epoch = 4 / 5 (early stop in 5), step = 44, loss = 0.04303, results = [0.0430336631834507, 0.9921875] -- elapsed (train): 45.30s
+Epoch = 4 / 5 (early stop in 5), step = 46, loss = 0.00332, results = [0.003319143783301115, 1.0] -- elapsed (train): 45.58s
+Epoch = 4 / 5 (early stop in 5), step = 48, loss = 0.01779, results = [0.017786920070648193, 0.9921875] -- elapsed (train): 45.88s
+Epoch = 4 / 5 (early stop in 5), step = 50, loss = 0.08183, results = [0.08183081448078156, 0.9765625] -- elapsed (train): 46.17s
+Epoch = 4 / 5 (early stop in 5), step = 52, loss = 0.00592, results = [0.005919917952269316, 1.0] -- elapsed (train): 46.47s
+Epoch = 4 / 5 (early stop in 5), step = 54, loss = 0.00647, results = [0.006465107202529907, 1.0] -- elapsed (train): 46.76s
+Epoch = 4 / 5 (early stop in 5), step = 56, loss = 0.00397, results = [0.003968834411352873, 1.0] -- elapsed (train): 47.06s
+Epoch = 4 / 5 (early stop in 5), step = 58, loss = 0.00859, results = [0.008593865670263767, 1.0] -- elapsed (train): 47.35s
+Epoch = 4 / 5 (early stop in 5), step = 60, loss = 0.00495, results = [0.004945982713252306, 1.0] -- elapsed (train): 47.66s
+Epoch = 4 / 5 (early stop in 5), step = 62, loss = 0.00706, results = [0.0070603834465146065, 1.0] -- elapsed (train): 47.94s
+1868/1868 [==============================] - 28s 14ms/step
+False
+Epoch 4 yielded predictions: (59756,), overall balanced accuracy: 99.32%, TP = 2,809 / 2,816, TN = 56,302 / 56,940
+   epoch     P      N  pred_P  pred_N    TP   FP     TN  FN   bal_acc        f1
+0      4  2816  56940    3447   56309  2809  638  56302   7  0.993155  0.897014
