@@ -1,6 +1,6 @@
 # CSN-341
 
-This is the group project for the course CSN-341 (Computer Networks), on the topic "Developing an Efficient Deep Learning-Based Network Traffic Classifier for Enhanced Network Security and Performance." \\
+This is the group project for the course CSN-341 (Computer Networks), on the topic "Developing an Efficient Deep Learning-Based Network Traffic Classifier for Enhanced Network Security and Performance." 
 
 ## Team Members:
 1. Anvadya Khare (21114015)
@@ -15,7 +15,8 @@ This is the group project for the course CSN-341 (Computer Networks), on the top
 10. Prerna (21114075)
 
 ## Environment Used
-A custom dataplane for forwarding and processing networking packets was used, it must be installed to use the custom dataplane (though the code will run using the standard Linux implementation of TCP also) in the dataplane folder (we have used IX Operating System with userspace dataplane developed at Stanford and EPFL). \\
+A custom dataplane for forwarding and processing networking packets was used, it must be installed to use the custom dataplane (though the code will run using the standard Linux implementation of TCP also) in the dataplane folder (we have used IX Operating System with userspace dataplane developed at Stanford and EPFL). 
+
 The dataplane requires the use of specific Intel NIC (refer to IX System Requirements). 
 
 ## How to use?
